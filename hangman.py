@@ -1,7 +1,7 @@
 # Problem Set 2, hangman.py
-# Name: 
-# Collaborators:
-# Time spent:
+# Name: Sarthak Agrawal
+# Collaborators: -
+# Time spent: 5 hours
 
 # Hangman Game
 # -----------------------------------
@@ -11,7 +11,6 @@
 # (so be sure to read the docstrings!)
 import random
 import string
-from collections import Counter
 
 WORDLIST_FILENAME = "words.txt"
 
@@ -62,7 +61,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
 
-    #Method 1 (Does not work)
+    #Method 1 (Does not work, needs correction)
     """
     secret=set(secret_word)
     freq={}
