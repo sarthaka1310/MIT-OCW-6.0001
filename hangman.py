@@ -61,7 +61,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
 
-    #Method 1 (Does not work, needs correction)
+    #Method 1 (Does not work)
     """
     secret=set(secret_word)
     freq={}
@@ -176,7 +176,7 @@ def hangman(secret_word):
                 print("Oops! That is not a valid letter. You have", warnings_remaining, "warnings left:", end = ' ')
         else:
             print("")
-            ch.lower()
+            ch=ch.lower()
             if ch in letters_guessed:
                 if warnings_remaining==0:
                     guesses_remaining-=1
@@ -228,7 +228,7 @@ def match_with_gaps(my_word, other_word):
     '''
 
     #other_word.strip(' ') #not required as input was also stripped
-    my_word.replace(' ', '') #takes care of strip and of '_ ' being of length 2
+    my_word=my_word.replace(' ', '') #takes care of strip and of '_ ' being of length 2
 
     if len(my_word)!=len(other_word):
         return False
@@ -263,7 +263,7 @@ def show_possible_matches(my_word):
     a=True
 
     for i in wordlist:
-        i.strip(' ')
+        i=i.strip(' ')
         if match_with_gaps(my_word, i):
             if a:
                 a=False
@@ -330,7 +330,7 @@ def hangman_with_hints(secret_word):
         
         else:
             print("")
-            ch.lower()
+            ch=ch.lower()
             if ch in letters_guessed:
                 if warnings_remaining==0:
                     guesses_remaining-=1
@@ -385,3 +385,4 @@ if __name__ == "__main__":
 
     secret_word = choose_word(wordlist)
     hangman_with_hints(secret_word)
+    
