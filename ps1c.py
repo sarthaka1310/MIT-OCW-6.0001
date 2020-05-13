@@ -7,14 +7,14 @@ amt = int(portion_down_payment*total_cost) #total amount to be saved
 
 starting_salary = int(input("Enter the starting salary: "))
 
-#debugging
+#debugging statement
 #print("amt : ", amt)
 
 def calc(midnum):
 
     portion_saved = float(midnum)/10**4
 
-    #debugging
+    #debugging statement
     #print("percentage saved from salary: ", portion_saved)
 
     current_savings = 0
@@ -38,6 +38,7 @@ u = 10000 #upper bound
 mid = 1
 steps = 0
 
+# binary(or bisection) search over [0,10000]
 while l <= u:
     steps += 1
     mid = l+(u-l)//2
