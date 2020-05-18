@@ -7,15 +7,9 @@ amt = int(portion_down_payment*total_cost) #total amount to be saved
 
 starting_salary = int(input("Enter the starting salary: "))
 
-#debugging
-#print("amt : ", amt)
-
 def calc(midnum):
 
     portion_saved = float(midnum)/10**4
-
-    #debugging
-    #print("percentage saved from salary: ", portion_saved)
 
     current_savings = 0
     annual_salary = starting_salary
@@ -24,12 +18,8 @@ def calc(midnum):
         val = (portion_saved*annual_salary)
         current_savings += ((current_savings*r) + val)//12
 
-        #debugging
-        #print("savings: ", int(current_savings))
-
         if i % 6 == 0:
             annual_salary += annual_salary*semi_annual_raise
-    #print(int(midnum), int(amt - current_savings))
     return amt-current_savings
 
 
@@ -42,8 +32,6 @@ while l <= u:
     steps += 1
     mid = l+(u-l)//2
     x = calc(mid)
-    #debugging statement
-    #print("mid :", mid," x: ", x)
 
     if(abs(x) < 100):
         break
